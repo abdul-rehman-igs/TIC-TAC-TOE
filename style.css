@@ -1,0 +1,117 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(110deg, #15d495 50%, #60ce5c 50%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.unique-button {
+    background: linear-gradient(45deg, #6200ea, #b388ff);
+    background-size: 400% 400%;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-position 0.5s;
+    margin: 10px;
+}
+
+.unique-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-position: 100% 0;
+}
+
+.unique-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #555;
+}
+
+.cell.x {
+    color: #15d495;
+    text-shadow: 0 0 5px #15d495, 0 0 10px #15d495, 0 0 15px #15d495;
+}
+
+.cell.o {
+    color: #60ce5c;
+    text-shadow: 0 0 5px #60ce5c, 0 0 10px #60ce5c, 0 0 15px #60ce5c;
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 2rem;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+.winning-message button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: hsl(0, 5%, 92%);
+}
+
+.mode-selection {
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    margin-top: 20px;
+}

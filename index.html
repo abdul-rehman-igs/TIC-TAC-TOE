@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="mode-selection" id="modeSelection">
+            <button id="singlePlayerButton" class="unique-button">Single Player</button>
+            <button id="twoPlayerButton" class="unique-button">Two Player</button>
+        </div>
+        <div class="board" id="board" style="display:none;">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div class="scoreboard" id="scoreboard" style="display:none;">
+            <div>X Wins: <span id="xWins">0</span></div>
+            <div>O Wins: <span id="oWins">0</span></div>
+        </div>
+        <div class="winning-message" id="winningMessage">
+            <div data-winning-message-text></div>
+            <button id="restartButton">Restart</button>
+        </div>
+        <footer class="footer">
+            &copy; 2024 ABDUL REHMAN KHALID
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
